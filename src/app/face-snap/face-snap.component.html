@@ -1,6 +1,6 @@
-<div class="face-snap-card">
+<div class="face-snap-card" [ngClass]="{ snapped: userHasSnapped }">
 <h2>{{ faceSnap.title }}</h2>
-<!--  controle flow vloc affichage conditionnelle k-->
+<!--  controle flow vloc affichage conditionnelle   k-->
   @if(faceSnap.location){
     <p> {{ faceSnap.location}}</p>
   } @else {
@@ -10,7 +10,8 @@
 <p>Mis en ligne le {{ faceSnap.createdAt}} </p>
 <p>{{ faceSnap.description}}</p>
 <!--  //liaison par evenement-->
+  <div>
   <button (click)="onAddSnap()">{{ snapButtonText }}</button>
-<p> {{ faceSnap.snaps}}</p>
-
+<p  [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps + ', 0)' }">🤌 {{ faceSnap.snaps }}</p>
+</div>
 </div>
