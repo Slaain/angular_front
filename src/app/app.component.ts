@@ -12,34 +12,39 @@ import {FaceSnap} from './models/snap-face';
 })
 
 export class AppComponent implements OnInit {
+
+  faceSnaps!: FaceSnap [];
   mySnap!:FaceSnap;
   myOtherSnap!: FaceSnap;
   myLastSnap!: FaceSnap;
 
   ngOnInit() {
-    this.mySnap= new FaceSnap(
-    "Slaain",
-      "slaain le boss",
-      'https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-1170x780.jpg',
-      new Date(),
-      10
+    this.faceSnaps = [
 
-
-    );
-    this.myOtherSnap= new FaceSnap(
-      'jennifer',
-      'la plus belle',
-      'https://gratisography.com/wp-content/uploads/2024/11/gratisography-fashion-tv-1170x780.jpg',
-      new Date(),
-      15
-    );
-    this.myLastSnap= new FaceSnap(
-      'Minou',
-      'le plus beau',
-      'https://gratisography.com/wp-content/uploads/2024/10/gratisography-halloween-cat-1036x780.jpg',
-      new Date(),
-      1651561656544654684656544655461656
-    )
+        new FaceSnap(
+          'Slaain',
+          'slaain le boss',
+          'https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-1170x780.jpg',
+          new Date(),
+          10
+        ),
+      new FaceSnap(
+        'jennifer',
+        'la plus belle',
+        'https://gratisography.com/wp-content/uploads/2024/11/gratisography-fashion-tv-1170x780.jpg',
+        new Date(),
+        15
+      ),
+      new FaceSnap(
+        'Minou',
+        'le plus beau',
+        'https://gratisography.com/wp-content/uploads/2024/10/gratisography-halloween-cat-1036x780.jpg',
+        new Date(),
+        1651561656544654684656544655461656
+      ),
+    ];
+    this.faceSnaps[1].setLocation('Vitrolles');
   }
+
 }
 
