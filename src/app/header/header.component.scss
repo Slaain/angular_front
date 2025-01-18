@@ -4,3 +4,24 @@ header {
   margin-bottom: 20px;
   padding: 10px;
 }
+
+a {
+  margin : 0 10px;
+  color: #333;
+  text-decoration: none;
+  &:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+ul {
+ margin-right: 3%;
+}
+li {
+  display: inline;
+  text-align: center;
+}
+.active {
+  color: #667;
+  text-decoration: underline;
+}
